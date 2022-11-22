@@ -41,7 +41,7 @@ serials = ["( Part Numbers )", "N00501", "N00502", "P00104", "A00008", "P91240",
 
 descriptions = ["Pelican Storm Case IM2720 ( Small ) <br>System : ____ Node ", "VMAX Sensor <br>Serial Number : ", "VMAX Power Amplifier Serial Number : <br>Antenna , GPS ( Sensor ) ", "Power Adapter , VMAX <br>Serial Number : ", "AC Power Supply ( 28V ) , with 150W Power Cord ", "BB - 2557 Battery for VMAX ", "\" Y \" Power Cable , 28VDC ( Battery to Power Adapter ) ", "Cable , VMAX Broadcast with Mast Adapter ", "Transit Case custom foam for VMAX ", "Wave Relay MPU - 5 Radio With S - Band Module ( Attached to MPU5 ) <br>Serial Number : ", "Pelican Storm Case IM2950 ( Large ) <br>System : ____ Node", "Remote Antenna - X2 , RAX2 <br>Serial Number : ", "RH519 , Antenna DF Whip 6 \" ", "Charging Adapter , BB - 2557 , Green Shoe ", "Battery Charger ( Individual Charger , Medium Rate ) ", "BB-2557 Battery for VMAX", "Vehicle Power Adapter, DC to DC (Lind)", "Hard Drive, Rugged, 2TB (With USB to USB Cable)", "Wave Relay Power Adapter", "Power Cord 12 VDC Cigarette Lighter", "Ear Piece, 3.5mm Straight Plug, 42\" Clear Tube", "\"Y\" Power Cable, 14 VDC (1 Battery to 2 Connectors)", "|A-Band Antenna, 30-512 MHz", "B-Band Antenna, 500-3000 MHz", "C-Band Antenna, 2300-6000 MHz", "Cable, Vehicle Power Adapter to Tablet", "Cable, Cigarette Lighter", "Cable, Mil Battery", "VHF Antenna, Fox Hunt Loop", "UHF Antenna, Fox Hunt Loop", "TNC to BNC Antenna Adapter (On UHF Antenna)", "Tablet, Panasonic, Toughpad with Slim Battery & Pen", "Tablet Battery, Long-Life, Panasonic", "Dust Caps, BNC, Non-Shorting", "Charger Module, Wave Relay Battery", "Charger Module, Wave Relay Battery, International Plug Adapters<br>(European, British, Australia)", "DF Antenna Whip, 12\"", "Antenna, Wave Relay, RF", "AC Power Supply, VROD with Power Cord", "Charger, Panasonic Tablet with Power Cord", "Charger, Individual Tablet Battery", "Tether Cable, Single, Rapid Mate To USB (VROD to Tablet)", "Tether Cable, Rapid Mate to USB & Ethernet ((VROD to Tablet & MPU5)", "RAX Cable, 1.5m (4ft)", "RAX Cable, 5M (15FT)", "Antenna Band A-Low, 30-108MHz Harris", "Wave Relay Audi Cable", "Wave Relay Data Cable", "Wave Relay Battery", "Wave Relay Manual", "VMAX User Guide (CD-ROM)", "VMAX Quick Start Guide", "Computer Based Training CD", "Backpack Assembly, VMAX Tactical Tailor with GUI Pounch", "Antenna Mast"]
 
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", () => {
 
     var cookie = document.cookie;
 
@@ -81,5 +81,4 @@ right.addEventListener("click", () => {
         id.innerHTML = serials[+document.cookie];
     }
 });
-};
-
+});
