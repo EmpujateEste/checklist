@@ -67,6 +67,8 @@ left.addEventListener("click", () => {
         
     }else{
         document.cookie = String(+document.cookie - 1);
+        var title = document.querySelector(".item");
+        var id = document.querySelector(".id");
         title.innerHTML = descriptions[+document.cookie];
         id.innerHTML = serials[+document.cookie];
     }
@@ -77,8 +79,11 @@ right.addEventListener("click", () => {
         
     }else{
         document.cookie = String(+document.cookie + 1);
+        var title = document.querySelector(".item");
+        var id = document.querySelector(".id");
         title.innerHTML = descriptions[+document.cookie];
         id.innerHTML = serials[+document.cookie];
     }
 });
 });
+
