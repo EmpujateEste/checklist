@@ -15,20 +15,39 @@ nav{
     background-color: var(--sec);
     width:100vw;
     height:5rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
     position:relative;
 }
-nav h1{
-    position:relative;
-    left:2rem;
+.cnt-txt{
+    width: 100%;
+    right:0;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+    position: absolute;
+    text-align: center;
+}
+.alt{
+    width: 80%;
 }
 .menu-btn{
     position:absolute;
-    left:35px;
-    z-index: 2;
+    width: 30%;
+    height:100%;
+    left:0;
+    top:0;
 }
+.burger{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:36px;
+    left:calc(50% - 20px);
+    top: calc(50% - 14px)
+}
+
 .burg{
     background-color: var(--main);
     width: 40px;
@@ -36,7 +55,31 @@ nav h1{
     border-radius: 2px;
     position:relative;
     margin-bottom:7px;
-    
+}
+.seek{
+    width:100vw;
+    height: calc(100vh - 5rem);
+    top:5rem;
+    left: -100vw;
+    position: absolute;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 2px solid black;
+    z-index: 2;
+}
+.seek a{
+    padding:5rem 0 5rem 0;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.seek .spacers{
+    width:75%;
 }
 .hmenu{
     width:100vw;
@@ -85,6 +128,7 @@ footer{
     background-color: var(--sec);
     bottom:0;
     position:absolute;
+    z-index: 2;
 }
 footer p{
     color: var(--main);
