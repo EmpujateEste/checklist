@@ -62,25 +62,28 @@ window.onload = function(){
 
 var left = document.querySelector(".left");
 var right = document.querySelector(".right");
-var title = document.querySelector(".item");
-var id = document.querySelector(".id");
 
-left.addEventListener("click", () => {
-    if(+document.cookie == 0){
-        
-    }else{
-        document.cookie = String(+document.cookie - 1);
-        title.innerHTML = descriptions[+document.cookie];
-        id.innerHTML = serials[+document.cookie];
-    }
-});
+function funciona(d) {
+    console.log(d);
 
-right.addEventListener("click", () => {
-    if(+document.cookie == (serials.length - 1)){
-        
+    var title = document.querySelector(".item");
+    var id = document.querySelector(".id");
+
+    if(d == 2 || ((+document.cookie == 0) && d == 0) || ((+document.cookie == (serials.length - 1)) && d == 1)){
+            title.innerHTML = descriptions[+document.cookie];
+            id.innerHTML = serials[+document.cookie];
     }else{
-        document.cookie = String(+document.cookie + 1);
-        title.innerHTML = descriptions[+document.cookie];
-        id.innerHTML = serials[+document.cookie];
+        if(d == 0){
+            document.cookie = String(+document.cookie - 1);
+        }else{
+            document.cookie = String(+document.cookie + 1);
+        }
+            title.innerHTML = descriptions[+document.cookie];
+            id.innerHTML = serials[+document.cookie];
     }
-});
+};
+
+funciona(2);
+
+left.addEventListener("click", () => {funciona(0)});
+right.addEventListener("click", () => {funciona(1)});
