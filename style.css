@@ -133,9 +133,12 @@ footer p{
 }
 .quant{
     position: absolute;
-    top: 5.5rem;
-    right:0;
+    top: 6rem;
+    right: 1rem;
     text-align: center;
+}
+.q{
+    color:white;
 }
 .chn{
     background-color: var(--sec);
