@@ -1,5 +1,5 @@
 var num = 40;
-var left = 0;
+var lef = 0;
 dir = true;
 
 var hmen = document.querySelector(".hmenu");
@@ -11,10 +11,10 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
         if((num <= 41 && num > 24) && dir){
             slides[0].style.width = num + "px";
             slides[2].style.width = num + "px";
-            slides[0].style.left = left + "px";
-            slides[2].style.left = left + "px";
+            slides[0].style.lef = lef + "px";
+            slides[2].style.lef = lef + "px";
             num -= 0.5;
-            left += 0.25;
+            lef += 0.25;
             console.log(num);
             if(num == 25){
                 dir = false;
@@ -24,10 +24,10 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
         else if((num >=24 && num < 41) && !dir){
             slides[0].style.width = num + "px";
             slides[2].style.width = num + "px";
-            slides[0].style.left = left + "px";
-            slides[2].style.left = left + "px";
+            slides[0].style.lef = lef + "px";
+            slides[2].style.lef = lef + "px";
             num += 0.5;
-            left -= 0.25;
+            lef -= 0.25;
             console.log(num);
             if(num == 40){
                 dir = true;
