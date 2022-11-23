@@ -5,7 +5,6 @@ dir = true;
 var hmen = document.querySelector(".hmenu");
 
 document.querySelector(".menu-btn").addEventListener("click", () => {
-    console.log("ran");
     slides = document.querySelectorAll(".burg");
     var interval = setInterval(function(){
         if((num <= 41 && num > 24) && dir){
@@ -15,7 +14,6 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
             slides[2].style.left = lef + "px";
             num -= 0.5;
             lef += 0.25;
-            console.log(num);
             if(num == 25){
                 dir = false;
                 clearInterval(interval);
@@ -28,7 +26,6 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
             slides[2].style.left = lef + "px";
             num += 0.5;
             lef -= 0.25;
-            console.log(num);
             if(num == 40){
                 dir = true;
                 clearInterval(interval);
