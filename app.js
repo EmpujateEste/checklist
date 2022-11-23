@@ -1,35 +1,38 @@
 var num = 40;
-var lef = 0;
+skt = -100;
 dir = true;
 
 var hmen = document.querySelector(".hmenu");
 
 document.querySelector(".menu-btn").addEventListener("click", () => {
     slides = document.querySelectorAll(".burg");
+    seek = document.querySelector(".seek");
+    
     var interval = setInterval(function(){
-        if((num <= 41 && num > 24) && dir){
+        if ((num <= 40 && num > 30) && dir){
             slides[0].style.width = num + "px";
             slides[2].style.width = num + "px";
-            slides[0].style.left = lef + "px";
-            slides[2].style.left = lef + "px";
+            seek.style.left = skt + 5 + "vw";
+            seek.style.boxSizing = "content-box";
             num -= 0.5;
-            lef += 0.25;
-            if(num == 25){
+            skt += 5;
+            if(num == 30){
                 dir = false;
-                clearInterval(interval);
+                clearInterval(interval)
             }
-        }
-        else if((num >=24 && num < 41) && !dir){
+        }else if((num >= 30 && num < 40) && !dir){
             slides[0].style.width = num + "px";
             slides[2].style.width = num + "px";
-            slides[0].style.left = lef + "px";
-            slides[2].style.left = lef + "px";
+            seek.style.left = skt - 5 + "vw";
+            seek.style.boxSizing = "border-box";
             num += 0.5;
-            lef -= 0.25;
+            skt -= 5;
             if(num == 40){
                 dir = true;
-                clearInterval(interval);
+                clearInterval(interval)
             }
+        }else{
+
         }
     }, 25);
 });
